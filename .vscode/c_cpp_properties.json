@@ -3,14 +3,17 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/usr/include/c++/13.2.1",
+                "/usr/include/boost",
+                // "/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include",
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
             "compilerArgs": [],
             "cppStandard": "c++17",
             "cStandard": "c11",
-            "intelliSenseMode": "linux-gcc-x64"
+            "intelliSenseMode": "${default}"
         }
     ],
     "version": 4
