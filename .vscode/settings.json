@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "ostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.default.compilerPath": "/usr/bin/g++"

@@ -4,8 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/c++/13.2.1",
-                "/usr/include/boost",
+                "/usr/include/c++/13.2.1/**",
+                "/usr/include/boost/**"
                 // "/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include",
             ],
             "defines": [],
