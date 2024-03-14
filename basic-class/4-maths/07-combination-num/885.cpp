@@ -1,43 +1,31 @@
+// 递推法求组合数
 #include <iostream>
-using namespace std;
-typedef long long LL;
 
-const int N   = 100010;
+using namespace std;
+
+const int N = 100010, M = 2010;
+int       c[M][M];
 const int mod = 1e9 + 7;
 
-LL quick_pow(LL base, LL power) {
-    LL result = 1;
-    while (power) {
-        if (power & 1) result = result * base % mod;
-        base = base * base % mod;
-        power >>= 1;
-    }
-    return result;
-}
+void combination_num() {
 
-LL factorial(LL x) {
-    LL result = 1;
-    for (int i = 2; i <= x; i++) {
-        result = result * i % mod;
-    }
-    return result;
-}
-
-LL combination_num(LL n, LL m) {
-    if (m > n) return 0;
-    LL a = factorial(n);
-    LL b = factorial(m) * factorial(n - m) % mod;
-    // 使用费马小定理求模逆元
-    return a * quick_pow(b, mod - 2) % mod;
+    // c[a][b] 表示从a个苹果中选b个的方案数
+    for (int i = 0; i < M; i++)
+        for (int j = 0; j <= i; j++)
+            if (!j)
+                c[i][j] = 1;
+            else
+                c[i][j] = (c[i - 1][j] + c[i - 1][j - 1]) % mod;
 }
 
 int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        LL n, m;
-        cin >> n >> m;
-        cout << combination_num(n, m) << endl;
+    int n;
+    cin >> n;
+    combination_num();
+    while (n--) {
+        int a, b;
+        cin >> a >> b;
+        cout << c[a][b] << endl;
     }
     return 0;
 }
