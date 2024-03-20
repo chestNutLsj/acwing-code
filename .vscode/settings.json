@@ -4,7 +4,8 @@
         "type_traits": "cpp",
         "ostream": "cpp",
         "chrono": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "iosfwd": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.default.compilerPath": "/usr/bin/g++"

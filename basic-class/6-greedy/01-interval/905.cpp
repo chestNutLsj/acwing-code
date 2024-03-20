@@ -3,10 +3,10 @@
 #include <iostream>
 
 using namespace std;
-typedef pair<int, int> PII;
+typedef pair<int, int> PLL;
 
 const int N = 100010;
-PII       interval[N]; // 存放区间的数组,pair.first存放闭区间的左端，second存放闭区间的右端
+PLL       interval[N]; // 存放区间的数组,pair.first存放闭区间的左端，second存放闭区间的右端
 
 int main() {
     int n;
@@ -16,7 +16,7 @@ int main() {
     }
 
     // 使用lambda表达式按照区间的右端点从小到大排序
-    sort(interval, interval + n, [](const PII &a, const PII &b) {
+    sort(interval, interval + n, [](const PLL &a, const PLL &b) {
         return a.second < b.second;
     });
 

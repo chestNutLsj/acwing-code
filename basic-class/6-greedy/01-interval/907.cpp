@@ -5,9 +5,9 @@
 #include <vector>
 
 using namespace std;
-typedef pair<int, int> PII;
+typedef pair<int, int> PLL;
 
-vector<PII> intervals;
+vector<PLL> intervals;
 
 int main() {
     int s, t; // 指定要覆盖的区间[s,t]

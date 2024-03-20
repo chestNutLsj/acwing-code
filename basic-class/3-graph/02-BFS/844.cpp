@@ -4,7 +4,7 @@
 #include <queue>
 
 using namespace std;
-typedef pair<int, int> PII;
+typedef pair<int, int> PLL;
 
 const int N = 110;
 int       g[N][N]; // 存储地图
@@ -13,11 +13,11 @@ int       n, m;
 
 void bfs(int a, int b) // 广度优先遍历
 {
-    queue<PII> q;
+    queue<PLL> q;
     q.push({a, b});
 
     while (!q.empty()) {
-        PII start = q.front();
+        PLL start = q.front();
         q.pop();
 
         int dx[4] = {0, 1, 0, -1}, dy[4] = {-1, 0, 1, 0};
@@ -40,11 +40,11 @@ void bfs(int a, int b) // 广度优先遍历
 
 void bfs_print() {
     int        target = f[n][m];
-    queue<PII> q;
+    queue<PLL> q;
     q.push({n, m});
     cout << n << " " << m << endl;
     while (!q.empty()) {
-        PII start = q.front();
+        PLL start = q.front();
         q.pop();
 
         int dx[4] {0, 1, 0, -1}, dy[4] {1, 0, -1, 0};

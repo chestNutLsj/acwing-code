@@ -3,7 +3,7 @@
 #include <queue>
 
 using namespace std;
-typedef pair<int, int> PII; // first存储距离，second存储节点编号
+typedef pair<int, int> PLL; // first存储距离，second存储节点编号
 
 const int N = 200010, INF = 0x3f3f3f3f;
 int       n, m;
@@ -11,7 +11,7 @@ int       h[N], e[N], w[N], ne[N], idx; // 邻接表存储各点的头、边、�
 int       dist[N];                      // 存储节点1到其余所有节点的距离
 bool      st[N];
 
-priority_queue<PII, vector<PII>, greater<PII>> heap;
+priority_queue<PLL, vector<PLL>, greater<PLL>> heap;
 
 void add(int a, int b, int c) {
     e[idx]  = b;

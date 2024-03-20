@@ -4,12 +4,12 @@
 
 using namespace std;
 
-typedef pair<int, int> PII;
+typedef pair<int, int> PLL;
 
 const int N = 50010;
 
 int n;
-PII cow[N];
+PLL cow[N];
 
 int main() {
     scanf("%d", &n);

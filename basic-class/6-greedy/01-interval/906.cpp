@@ -5,11 +5,11 @@
 #include <vector>
 
 using namespace std;
-typedef pair<int, int> PII;
+typedef pair<int, int> PLL;
 
-vector<PII> intervals;
+vector<PLL> intervals;
 
-bool cmp(const PII &a, const PII &b) { return a.first < b.first; }
+bool cmp(const PLL &a, const PLL &b) { return a.first < b.first; }
 
 int main() {
     int n;

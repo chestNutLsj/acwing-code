@@ -5,10 +5,10 @@
 using namespace std;
 
 const int              N = 100010;
-typedef pair<int, int> PII;
+typedef pair<int, int> PLL;
 
-void merge(vector<PII> &segs) {
-    vector<PII> res;
+void merge(vector<PLL> &segs) {
+    vector<PLL> res;
 
     sort(segs.begin(), segs.end());
 
@@ -27,10 +27,10 @@ void merge(vector<PII> &segs) {
 
 int main() {
     int         n;
-    vector<PII> intervals;
+    vector<PLL> intervals;
     cin >> n;
     for (int i = 0; i < n; i++) {
-        PII interval;
+        PLL interval;
         cin >> interval.first >> interval.second;
         intervals.push_back(interval);
     }
