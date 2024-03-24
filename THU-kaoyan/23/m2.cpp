@@ -12,13 +12,10 @@ int       n;                      // 节点数
 int       a[N];                   // a[i] 表示编号i的节点上的粽子的种类，不同的值代表不同的种类
 int       ans[N];                 // ans[i]表示编号i的节点到根节点1的简单路径上粽子的种类数
 bool      st[N];                  // dfs中用作标记，表示该点已经被搜索过
-// int       cnt[N];                 // 记录每种粽子的出现次数
 
 void init() {
     fill(h, h + N, -1);
     fill(ans, ans + N, 0);
-    // fill(a, a + N, 0);
-    // fill(st, st + N, false);
     idx = 0;
 }
 

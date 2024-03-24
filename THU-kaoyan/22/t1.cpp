@@ -47,7 +47,7 @@ int main() {
 
     LL ans = 0;
     for (int i = 1; i <= n; i++) {
-        ans = (ans + a[i] * (i - 1) - a[i] * (n - i)) % MOD;
+        ans = (ans + a[i] * (1ll * (i - 1)) - a[i] * (1ll * (n - i))) % MOD;
         ans = (ans + MOD) % MOD; // 确保结果为正
     }
 

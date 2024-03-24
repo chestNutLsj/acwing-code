@@ -1,9 +1,11 @@
 // 22调剂题3——总k次方差（hard）
-// https://www.luogu.com.cn/problem/U414204
+// https://www.luogu.com.cn/problem/U414232
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 
 using namespace std;
-using ULL = unsigned long long;
+using LL = long long;
 
 int rd() {
     int  k = 0, f = 1;
@@ -29,12 +31,12 @@ void wr(int x) {
 
 const int N = 1e5 + 10, MOD = 998244353;
 int       n, k; // n个数，k次方差
-int       a[N]; // 存放数组
+LL        a[N]; // 存放数组
 
-ULL quic_power(int m, int k, int p) { // m^k mod p
-    ULL res = 1 % p, t = m;
+LL quic_power(LL m, LL k, LL p) { // m^k mod p
+    LL res = 1 % p, t = m;
     while (k) {
-        if (k & 1) res = res * t % p;
+        if (k & 1ll) res = res * t % p;
         t = t * t % p;
         k >>= 1;
     }
@@ -46,12 +48,12 @@ int main() {
     for (int i = 1; i <= n; i++)
         a[i] = rd();
 
-    ULL ans = 0;
+    LL ans = 0;
     for (int i = 1; i <= n; i++)
         for (int j = 1; j <= n; j++) {
-            int power = quic_power(abs(a[i] - a[j]), k, MOD);
-            ans       = (ans + power) % MOD;
+            LL power = quic_power(1ll * abs(a[i] - a[j]), 1ll * k, 1ll * MOD);
+            ans      = (ans + power) % (1ll * MOD);
         }
-    cout << ans % MOD << endl;
+    cout << 1ll * ans % MOD << endl;
     return 0;
 }
